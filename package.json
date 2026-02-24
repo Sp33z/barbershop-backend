@@ -1,0 +1,30 @@
+{
+  "name": "barbershop-backend",
+  "version": "0.0.1",
+  "description": "A backend for the barbershop service.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "better-auth": "^1.4.19",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.18.0",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.37.7"
+  }
+}
