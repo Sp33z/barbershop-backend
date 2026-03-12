@@ -1,8 +1,14 @@
 import { Router } from "express";
-import { me } from "./user.controller.ts";
+import { createUser, deleteUser, editUser, getUsers } from "./user.controller.ts";
 
 const userRoutes = Router();
 
-userRoutes.get("/me", me);
+userRoutes.get("/", getUsers);
+
+userRoutes.post("/", createUser);
+
+userRoutes.put("/", editUser);
+
+userRoutes.delete("/", deleteUser);
 
 export default userRoutes;

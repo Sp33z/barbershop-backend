@@ -6,29 +6,33 @@ const auth = betterAuth({
 
   database: pool,
 
+  tables: {
+    users: "users",
+    sessions: "sessions",
+  },
+
   user: {
+    modelName: "users",
     additionalFields: {
       phone: {
         type: "string",
         required: true,
       },
-      /*permission: {
-        type: "number",
-        required: true,
-        defaultValue: 0,
-        transformer: (value: any) => Number(0),
-
-      },*/
-    },
-  },
-
-  session: {
-    expiresIn: 1,
-    additionalFields: {
       permission: {
         type: "number",
+        defaultValue: 0,
+        required: true,
+        input: false,
       },
     },
+  },
+  account: {
+    modelName: "accounts",
+  },
+  session: {
+    modelName: "sessions",
+    expiresIn: 10,
+    preserveSessionInDatabase: false,
   },
 
   emailAndPassword: {

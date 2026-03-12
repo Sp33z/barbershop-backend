@@ -1,36 +1,35 @@
+import { DataTypes } from "sequelize";
 import sequelize from "../../utils/orm.ts";
 
-const User = sequelize.define("User", {
+const User = sequelize.define("users", {
   id: {
-    type: "STRING",
+    type: DataTypes.STRING,
     primaryKey: true,
   },
   name: {
-    type: "STRING",
+    type: DataTypes.STRING,
     allowNull: false,
   },
   email: {
-    type: "STRING",
+    type: DataTypes.STRING,
     allowNull: false,
     unique: true,
   },
   emailVerified: {
-    type: "BOOLEAN",
+    type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
   phone: {
-    type: "STRING",
-    allowNull: false,
+    type: DataTypes.STRING,
   },
   permission: {
-    type: "INTEGER",
-    defaultValue: 0,
+    type: DataTypes.STRING,
   },
   createdAt: {
-    type: "DATETIME",
+    type: DataTypes.DATE,
   },
   updatedAt: {
-    type: "DATETIME",
+    type: DataTypes.DATE,
   },
 });
 
