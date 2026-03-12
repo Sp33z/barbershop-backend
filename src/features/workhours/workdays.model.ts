@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../../utils/orm.ts";
 
-const Workhours = sequelize.define("workhours", {
+const Workdays = sequelize.define("workdays", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -33,4 +33,4 @@ const Workhours = sequelize.define("workhours", {
   },
 });
 
-export default Workhours;
+export default Workdays;

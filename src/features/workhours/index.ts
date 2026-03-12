@@ -1,1 +1,1 @@
-export { default as workhoursRouter } from "./workhours.routes.ts";
+export { default as workhoursRouter } from "./workdays.routes.ts";

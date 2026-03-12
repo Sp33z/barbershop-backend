@@ -5,7 +5,7 @@ import auth from "./utils/auth.ts";
 import userRoutes from "./features/user/user.routes.ts";
 import serviceRoutes from "./features/services/service.routes.ts";
 import appointmentRoutes from "./features/appointments/appointment.routes.ts";
-import workhoursRouter from "./features/workhours/workhours.routes.ts";
+import workhoursRouter from "./features/workhours/workdays.routes.ts";
 
 const app = express();
 
@@ -22,6 +22,6 @@ app.use(
 app.use("/api/user", userRoutes);
 app.use("/api/services", serviceRoutes);
 app.use("/api/appointments", appointmentRoutes);
-app.use("/api/workhours", workhoursRouter);
+app.use("/api/workdays", workhoursRouter);
 
 export default app;

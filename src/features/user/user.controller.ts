@@ -8,7 +8,7 @@ export const getUsers = async (req: Request, res: Response) => {
   const users = await User.findAll({
     where: {
       ...(id && { id: { [Op.eq]: id } }),
-      ...(employees && { permission: { [Op.gt]: 0 } }),
+      ...(employees && { permission: { [Op.gte]: employees } }),
     },
   });
 
